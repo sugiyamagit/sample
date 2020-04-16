@@ -1,0 +1,43 @@
+{
+	"logs": {
+		"logs_collected": {
+			"windows_events": {
+				"collect_list": [
+					{
+						"event_format": "xml",
+						"event_levels": [
+							"INFORMATION",
+							"WARNING",
+							"ERROR" 
+						],
+						"event_name": "System",
+						"log_group_name": "AppStream_Windows_SystemEventLog",
+						"log_stream_name": "{local_hostname}_{instance_id}"
+                    },
+                    {
+						"event_format": "xml",
+						"event_levels": [
+							"INFORMATION",
+							"WARNING",
+							"ERROR"
+						],
+						"event_name": "Security",
+						"log_group_name": "AppStream_Windows_SecurityEventLog",
+						"log_stream_name": "{local_hostname}_{instance_id}"
+                    },
+                    {
+						"event_format": "xml",
+						"event_levels": [
+							"INFORMATION",
+							"WARNING",
+							"ERROR"
+						],
+						"event_name": "Microsoft-Windows-Sysmon/Operational",
+						"log_group_name": "AppStream_Windows_SysmonEventLog",
+						"log_stream_name": "{local_hostname}_{instance_id}"
+                    }
+				]
+			}
+		}
+	}
+}
